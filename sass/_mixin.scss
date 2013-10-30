@@ -1,0 +1,17 @@
+@mixin clearfix{
+	.cf:before,
+	.cf:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+
+	.cf:after {
+		clear: both;
+	}
+
+}
+
+@mixin border-box{
+	box-shadow:3px 3px 10px black;
+	-webkit-box-shadow:3px 3px 10px black;
+}

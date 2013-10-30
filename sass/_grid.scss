@@ -1,0 +1,33 @@
+$width:8.3333%;
+$gutter:1%;
+.container{
+	width:90%;
+	max-width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.row{
+	width:100%;
+	float:left;
+	margin-bottom:0.25em;
+	@include clearfix();
+	
+}
+
+.columns{
+	float:left;
+	height: 100%;
+	display:inline;
+	background:#cccccc;
+	margin-left:0.5%;
+	margin-right:0.5%;
+	padding:0.5em;
+}
+
+@for $i from 1 through 12{
+	.column_#{$i}{
+		@extend .columns;
+		width:$i*$width -$gutter;
+	}
+}

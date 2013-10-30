@@ -1,0 +1,61 @@
+form{
+	color:$formColor;
+	background:$formBackground;
+	label{
+		display:block;
+		font-size:1.2em;
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea{
+		width:300px;
+		border:1px solid $formInputBorder;
+		padding:0.6em;
+		outline:none;
+		background:$formInput;
+		&:hover,focus{
+			background:darken($formInput,10%);
+		}
+	}
+	
+	fieldset{
+		border:1px solid #190230;
+			
+	}
+	
+	legend{
+		padding:10px;
+		border:1px solid #190230;
+		background:$legendBackground;
+		color:white;
+		font-size:1.5em;
+		@include border-box;
+	}
+	
+	input[type="submit"]{
+		border:none;
+		background:$legendBackground;
+		padding:10px;
+		color:white;
+		font-size:1em;
+		@include border-box;
+		&:hover{
+			background:darken($legendBackground,5%);
+			box-shadow:none;
+			cursor:pointer;
+		}
+	}
+	span{
+		display:block;
+	}
+	.error{
+			display:none;
+			color:$formError;
+			font-size:0.8em;
+	}
+	
+
+
+}
